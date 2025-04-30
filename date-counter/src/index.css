@@ -1,0 +1,180 @@
+/* Global styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9c2ff, #a8caff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure full viewport height */
+  width: 100vw; /* Ensure full viewport width */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.App {
+  text-align: center;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%; /* Make sure the app takes full width */
+  max-width: 600px;
+  min-height: 80vh; /* Ensure the container takes enough space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out the elements inside */
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  color: #4a90e2;
+  font-size: 24px;
+}
+
+.heading {
+  color: #e84d3d;
+  font-size: 32px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.counter-container {
+  margin-top: 30px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: #58a6ff;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 10px;
+}
+
+.btn:hover {
+  background-color: #44a0e7;
+  transform: scale(1.1);
+}
+
+.step-text,
+.counter-text {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.date-display {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+
+.blue-text {
+  color: blue;
+}
+
+.footer {
+  margin-top: 30px;
+  color: #8b8b8b;
+  font-size: 14px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 26px; /* Smaller font size for smaller screens */
+  }
+
+  .time-display {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 8px 15px;
+    margin: 0 5px;
+  }
+
+  .step-text,
+  .counter-text {
+    font-size: 16px;
+  }
+
+  .date-display {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
+  .App {
+    padding: 15px;
+    width: 100%; /* Ensure full width */
+    min-height: 90vh; /* Use most of the viewport height */
+  }
+
+  .counter-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 22px; /* Further reduce font size for very small screens */
+  }
+
+  .time-display {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .step-text,
+  .counter-text {
+    font-size: 14px;
+  }
+
+  .date-display {
+    font-size: 12px;
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+
+  .App {
+    padding: 10px;
+    width: 100%; /* Ensure full width */
+    min-height: 90vh; /* Ensure the app takes most of the screen height */
+  }
+
+  .counter-container {
+    margin-top: 15px;
+  }
+}

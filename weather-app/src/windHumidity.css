@@ -1,0 +1,17 @@
+.wind-hum {
+  /* transparent white background */
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  color: white; /* clearly white text */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 22px; /* thoda bada text */
+  backdrop-filter: blur(10px);
+}
+
+.wind-hum p {
+  margin: 0;
+  padding: 0 15px;
+}

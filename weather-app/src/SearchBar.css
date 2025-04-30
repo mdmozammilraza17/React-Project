@@ -1,0 +1,63 @@
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4rem;
+}
+
+.entercity {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 18px;
+  border: 2px solid #4caf50;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.entercity:focus {
+  border-color: #45a049; /* Darker green border on focus */
+  box-shadow: 0 0 10px rgba(72, 209, 204, 0.6); /* Glowing effect */
+}
+
+.search-bar {
+  padding: 10px 20px; /* Larger button padding */
+  font-size: 14px; /* Larger font size */
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Optional: Button focus effect */
+button:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 10px rgba(72, 209, 204, 0.6); /* Glowing effect */
+}
+.suggestions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
