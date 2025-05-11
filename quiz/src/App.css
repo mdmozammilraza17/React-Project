@@ -1,0 +1,124 @@
+/* Mobile-first base styles */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #282c34;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: white;
+}
+
+.App-logo {
+  width: 80vw;
+  max-width: 300px;
+  height: auto;
+  pointer-events: none;
+  margin-bottom: 2rem;
+}
+
+.App-link {
+  color: #61dafb;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.App-link:hover {
+  background-color: rgba(97, 218, 251, 0.1);
+}
+
+/* Animation for logo */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .App-header {
+    padding: 2rem;
+  }
+
+  .App-logo {
+    width: 40vmin;
+    margin-bottom: 3rem;
+  }
+
+  .App-link {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .App-logo {
+    max-width: 400px;
+  }
+
+  .App-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape orientation on mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  .App-header {
+    padding-top: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .App-logo {
+    width: 30vmin;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Accessibility: High contrast mode */
+@media (prefers-contrast: high) {
+  .App-header {
+    background-color: black;
+    color: white;
+  }
+
+  .App-link {
+    color: cyan;
+    text-decoration: underline;
+    outline: 2px solid cyan;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 360px) {
+  .App-header {
+    padding: 0.5rem;
+  }
+
+  .App-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

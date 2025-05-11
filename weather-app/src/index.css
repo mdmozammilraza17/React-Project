@@ -1,0 +1,252 @@
+/* App.css */
+
+/* Base Styles with Cute Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Neue", cursive, "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffd6e0 0%, #c1f0ff 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: bgPulse 15s infinite alternate;
+}
+
+@keyframes bgPulse {
+  0% {
+    background-color: #ffd6e0;
+  }
+  50% {
+    background-color: #c1f0ff;
+  }
+  100% {
+    background-color: #fff4c1;
+  }
+}
+
+.main {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  border: 3px solid #ffb6c1;
+  position: relative;
+  overflow: hidden;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px dashed #ffb6c1;
+  border-radius: 35px;
+  z-index: -1;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  color: #ff6b9d;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  /* content: "☁️⛅☀️"; */
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+label {
+  position: relative;
+  display: block;
+  margin: 25px auto;
+  max-width: 300px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px 25px;
+  padding-right: 50px;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid #a8e6ff;
+}
+
+input[type="text"]:focus {
+  border-color: #ff9ebb;
+  box-shadow: 0 4px 20px rgba(255, 155, 186, 0.3);
+}
+
+span {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+span:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.weather-icon {
+  font-size: 3rem;
+  margin: 15px 0;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+p {
+  margin: 12px 0;
+  color: #5a5a5a;
+  font-size: 1.2rem;
+}
+
+.temp {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6b9d;
+  margin: 10px 0;
+}
+
+.humidity {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border-radius: 20px;
+  border: 2px dotted #a8e6ff;
+}
+
+.humidity p {
+  margin: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Cloud Animation */
+.cloud {
+  position: absolute;
+  opacity: 0.3;
+  z-index: -1;
+  animation: float 15s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .main {
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  input[type="text"] {
+    padding: 12px 20px;
+    padding-right: 45px;
+  }
+
+  .temp {
+    font-size: 2rem;
+  }
+
+  .humidity {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  input[type="text"] {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}

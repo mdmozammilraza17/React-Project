@@ -1,0 +1,403 @@
+:root {
+  --color-darkest: #343a40;
+  --color-dark: #495057;
+  --color-medium: #ced4da;
+  --color-light: #f1f3f5;
+  --color-theme: #1098ad;
+  --color-accent: #ffa94d;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-light);
+  background-color: var(--color-darkest);
+  padding: 1.6rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.app-header {
+  width: 100%;
+  max-width: 66rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1.5rem;
+  background-color: #495057;
+  border-radius: 100px;
+  width: 100%;
+}
+
+img {
+  width: 10rem;
+  max-width: 14rem;
+}
+
+h1 {
+  font-family: "Codystar";
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.progress {
+  margin-bottom: 2rem;
+  display: grid;
+  justify-content: space-between;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  font-size: 1.4rem;
+  color: var(--color-medium);
+  width: 100%;
+}
+
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  grid-column: 1 / -1;
+}
+
+::-webkit-progress-bar {
+  background-color: var(--color-medium);
+  border-radius: 100px;
+}
+::-webkit-progress-value {
+  background-color: var(--color-theme);
+  border-radius: 100px;
+}
+
+.btn {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.6rem;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 1rem 1.8rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.btn:not([disabled]):hover {
+  background-color: var(--color-darkest);
+}
+
+.btn-option:not([disabled]):hover {
+  transform: translateX(0.8rem);
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+}
+
+.btn-ui {
+  float: none;
+  margin: 1rem auto;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.btn-option {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.5rem;
+}
+
+.btn-option.correct {
+  background-color: var(--color-theme);
+  border: 2px solid var(--color-theme);
+  color: var(--color-light);
+}
+.btn-option.wrong {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: var(--color-darkest);
+}
+
+.answer {
+  transform: translateX(1rem);
+}
+
+.result {
+  background-color: var(--color-theme);
+  color: var(--color-light);
+  border-radius: 100px;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+
+.result span {
+  font-size: 1.8rem;
+  margin-right: 4px;
+}
+
+.highscore {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1.2rem;
+  color: var(--color-medium);
+  font-size: 1.2rem;
+}
+
+.timer {
+  float: none;
+  font-size: 1.4rem;
+  color: var(--color-medium);
+  border: 2px solid var(--color-dark);
+  padding: 0.8rem 1.6rem;
+  border-radius: 100px;
+  margin: 0 auto 1.5rem;
+  display: block;
+  text-align: center;
+}
+
+.loader {
+  width: 40px;
+  height: 20px;
+  background-size: calc(100% / 3) 10px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 3rem 1rem;
+}
+
+.counter * {
+  font-size: inherit;
+  padding: 0.6rem;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  body {
+    padding: 2.4rem;
+  }
+
+  .app-header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.2rem 2.4rem;
+    max-width: none;
+  }
+
+  .progress {
+    font-size: 1.6rem;
+  }
+
+  .result {
+    font-size: 1.8rem;
+  }
+
+  .timer {
+    font-size: 1.6rem;
+    float: left;
+    margin: 0;
+  }
+
+  .btn-ui {
+    float: right;
+    margin: 0;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  body {
+    padding: 3.2rem;
+  }
+
+  h1 {
+    font-size: 5.6rem;
+  }
+
+  img {
+    width: 14rem;
+  }
+
+  .btn {
+    font-size: 2rem;
+  }
+
+  .progress {
+    font-size: 1.8rem;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1200px) {
+  .main {
+    max-width: 60rem;
+  }
+}
+
+/* StartScreen.css */
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.contact-info {
+  /* Base styles */
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--color-light);
+
+  /* Make content wrap properly */
+  word-break: break-word;
+  max-width: 100%;
+
+  /* Layout for small screens */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Email link styling */
+.contact-info a {
+  color: var(--color-theme);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .contact-info {
+    font-size: 1.4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Add separators */
+  .contact-info span:not(:last-child)::after {
+    content: " - ";
+    margin: 0 0.5rem;
+    color: var(--color-medium);
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .contact-info {
+    font-size: 1.6rem;
+  }
+}

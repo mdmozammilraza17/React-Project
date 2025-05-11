@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "question": "Which is the capital city of Rajasthan?",
+      "options": ["Udaipur", "Jodhpur", "Jaipur", "Kota"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which Indian festival is known as the 'Festival of Lights'?",
+      "options": ["Holi", "Diwali", "Navratri", "Eid"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Who is known as the Father of the Nation in India?",
+      "options": [
+        "Subhash Chandra Bose",
+        "Bhagat Singh",
+        "Jawaharlal Nehru",
+        "Mahatma Gandhi"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which Indian cricketer is known as the 'Master Blaster'?",
+      "options": ["Virat Kohli", "MS Dhoni", "Sachin Tendulkar", "Kapil Dev"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which river is considered the holiest in India?",
+      "options": ["Yamuna", "Godavari", "Narmada", "Ganga"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Who was the first woman Prime Minister of India?",
+      "options": [
+        "Pratibha Patil",
+        "Sonia Gandhi",
+        "Indira Gandhi",
+        "Sarojini Naidu"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which city is known as the 'Silicon Valley of India'?",
+      "options": ["Hyderabad", "Bangalore", "Pune", "Chennai"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which Indian movie won the Best Original Song Oscar in 2023?",
+      "options": ["RRR", "Pushpa", "Lagaan", "Slumdog Millionaire"],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "In which year did India gain independence?",
+      "options": ["1945", "1947", "1950", "1930"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the national sport of India?",
+      "options": ["Cricket", "Football", "Hockey", "Kabaddi"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which Indian state is famous for the dance form 'Kathakali'?",
+      "options": ["Tamil Nadu", "Kerala", "Karnataka", "Odisha"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Who was the first President of India?",
+      "options": [
+        "Rajendra Prasad",
+        "APJ Abdul Kalam",
+        "S. Radhakrishnan",
+        "Zakir Hussain"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which Indian monument is one of the New Seven Wonders of the World?",
+      "options": ["Qutub Minar", "Gateway of India", "India Gate", "Taj Mahal"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which language is most spoken in India?",
+      "options": ["English", "Hindi", "Bengali", "Telugu"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which Indian festival is celebrated with colors?",
+      "options": ["Diwali", "Holi", "Raksha Bandhan", "Onam"],
+      "correctOption": 1,
+      "points": 10
+    }
+  ]
+}
